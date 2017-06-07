@@ -30,7 +30,7 @@ module.exports = function(robot) {
 		var data = msg.match[1].trim().replace(/\bcrow\b/gi,'');
 		var crowFace = crowFaces[Math.floor(Math.random()*crowFaces.length)];
 		cleverbot.write(data, function(response){
-			msg.send(response.output.replace(/\bcomputer|robot\b/gi,'pingas') + crowFace);
+			msg.send(response.output.replace(/\bcomputer|robot\b/gi,'pingas') + ' ' + crowFace);
 		});
 	});
 };
